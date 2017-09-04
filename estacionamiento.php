@@ -16,8 +16,10 @@ class ESTACIONAMIENTO
     {
         echo "estoy sacando";
         $ahora = date("Y-m-d H:i:s");
-        $archivo = fread("Archivos/Estacionamiento.txt",filesize($archivo));
-
+        $txt = "Archivos/Estacionamiento.txt";
+        $archivo = fopen ("Archivos/Estacionamiento.txt","r");
+        echo  fread($archivo,filesize($txt));
+        fclose($archivo);
     }
 }
 ?>

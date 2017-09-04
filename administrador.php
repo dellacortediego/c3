@@ -8,7 +8,7 @@ $auto3 = new VEHICULO("BBB 123");
 $auto4 = new VEHICULO("CCC 123");
 $auto5 = new VEHICULO("DDD 123");
 
-$accion = "GUARDAR";
+$accion = "Cargar";
 
 if($accion == "GUARDAR")
 {
@@ -21,7 +21,7 @@ ESTACIONAMIENTO::guardar($auto5);
 
 }else
 {
-
+ESTACIONAMIENTO::sacar($auto);
 }
 
 ?>
