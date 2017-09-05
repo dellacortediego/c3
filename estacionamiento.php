@@ -8,7 +8,7 @@ class ESTACIONAMIENTO
         echo "Estoy guardando";
         $archivo = fopen ("Archivos/Estacionamiento.txt","a");
         $ahora = date("Y-m-d H:i:s");
-        fwrite($archivo,$auto->getpatente()."-".$ahora."\r\n");
+        fwrite($archivo,$auto->getpatente()."-".$ahora."."."\r\n");
         fclose($archivo);
         
     }
@@ -19,7 +19,13 @@ class ESTACIONAMIENTO
         $txt = "Archivos/Estacionamiento.txt";
         $archivo = fopen ("Archivos/Estacionamiento.txt","r");
         echo  fread($archivo,filesize($txt));
+        echo "<br>";
+        var_dump($archivo);
+        echo "<br>";
+        echo fgets($archivo);
         fclose($archivo);
+        
+        
     }
 }
 ?>
